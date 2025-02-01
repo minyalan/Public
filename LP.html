@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reflecto - Your Digital Self-Care Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Soft, feminine color palette */
+            --primary: #957DAD;    /* Soft purple */
+            --secondary: #D8B7DD;  /* Light lavender */
+            --accent: #F7D1CD;     /* Soft pink */
+            --text: #4A4A4A;       /* Soft black for readability */
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            border: none;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .example-entry {
+            background: #fff;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-family: 'Lato', sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .badge {
+            background: rgba(255,255,255,0.9);
+            color: var(--primary);
+            border-radius: 25px;
+            padding: 0.7rem 1.5rem;
+            display: inline-block;
+            margin: 0.5rem;
+            font-weight: 500;
+        }
+        .testimonials-section {
+            padding: 4rem 1rem;
+            text-align: center;
+            background: var(--secondary);
+            color: white;
+        }
+        .testimonials-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .testimonial {
+            display: none;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            color: var(--text);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.5s ease;
+        }
+        .testimonial.active {
+            display: block;
+        }
+        .testimonial cite {
+            display: block;
+            margin-top: 1rem;
+            font-style: normal;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        .slider-controls {
+            margin-top: 1rem;
+        }
+        .slider-controls button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 0 0.5rem;
+        }
+        .slider-controls button:hover {
+            background: var(--accent);
+        }
+        .progress-graph {
+            width: 100%;
+            max-width: 400px;
+            margin: 1rem auto;
+            display: block;
+        }
+        .cta-button {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 30px;
+            margin: 0 1rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Reflecto</h1>
+        <p>Your personal space for mindful self-reflection ✨</p>
+        <div class="badges">
+            <div class="badge">Mindful Journaling</div>
+            <div class="badge">Private & Secure</div>
+            <div class="badge">Self-Care Companion</div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h2>💝 Your Safe Space</h2>
+            <p>Share your thoughts freely through voice or text, just like talking to a trusted friend.</p>
+        </div>
+
+        <div class="feature-card">
+            <h2>✨ Mindful Organization</h2>
+            <p>Transform your thoughts into beautifully organized reflections:</p>
+            <div class="example-entry">
+                ## 💖 Gratitude<br>
+                - Found a moment of peace during morning coffee<br>
+                ## 🌱 Personal Growth<br>
+                - Handled a challenging situation at work with grace<br>
+                ## 💫 Tomorrow's Intentions<br>
+                - Schedule that self-care appointment...
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <h2>🌸 Your Growth Story</h2>
+            <p>Beautifully capture your journey with our elegant timeline view, celebrating every small win and meaningful moment.</p>
+            <img src="/Users/almina/iOS_dev/Public/ReflectLP.webp" alt="Weekly spiritual growth report" class="progress-graph">
+        </div>
+    </section>
+    <section class="testimonials-section">
+        <h2>What Our Users Say</h2>
+        <div class="testimonials-container">
+            <blockquote class="testimonial active">
+                "As a mom of three, Reflecto helps me see my worth beyond diaper changes."
+                <cite>- Sarah, mom of 3</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+                "My nightly Reflecto ritual makes NYC feel less lonely."
+                <cite>- Lisa, NYC Accountant</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+                "Finally, a journal that respects my limited time and helps me manage my anxiety."
+                <cite>- Mikako, Tokyo Publisher</cite>
+            </blockquote>
+        </div>
+        <div class="slider-controls">
+            <button onclick="prevTestimonial()">Previous</button>
+            <button onclick="nextTestimonial()">Next</button>
+        </div>
+    </section>
+
+    <script>
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        function prevTestimonial() {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        // Auto-rotate testimonials every 5 seconds
+        setInterval(nextTestimonial, 5000);
+    </script>
+    <section class="cta-section" style="text-align: center; padding: 4rem 1rem;">
+        <h2>Begin Your Self-Care Journey</h2>
+        <p>Join thousands of women who've found their digital sanctuary</p>
+        <div style="margin: 2rem 0;">
+            <button class="cta-button">Download for iOS</button>
+            <button class="cta-button" style="background: var(--secondary);">Download for Android</button>
+        </div>
+        <small>🔒 Your thoughts stay private • Judgment-free space • Daily inspiration</small>
+    </section>
+</body>
+</html>
